@@ -1,0 +1,50 @@
+---
+title: Cache Systems
+date: '2024-06-24'
+tags: ['cache', 'system design', 'fundamental']
+draft: false
+summary: Example of a markdown file with code blocks and syntax highlighting
+---
+
+## Client side cache
+
+Web browsers can cache HTTP responses to enable faster retrieval of data.
+
+When we request data over HTTP for the first time, and it is returned with an expiration policy in the HTTP header.
+
+We request the same data again, and the browser returns the data from its cache if available.
+
+## CDNs
+
+Content delivery Networks(CDNs) are widely used to improve the delivery of static content.such as videos, images and other web assets.
+
+One of the ways that CDNs speeds up content delivery is through caching
+e.g. Amazon CloudFront
+
+The process is when the CDN network looks for the requested content in its cache. If the content is not already in the cache, the CDN fetch it from the origin server and cache it on its edge servers.
+
+When another user requests the same content, the CDN can deliver the content directly from its cache, eliminating the need to fetch it from the origin server again.
+
+## Load Balancer
+
+Some load balancers can cache resources to reduce the load on back-end servers.
+
+the load balancer can cache the response and serve it directly to future users who request the same content.
+
+This can improve reponse times and reduce the load on the back-end servers.
+
+## Kafka
+
+Caching does not always have to be in memory.
+
+In the messaging infrastructure, message brokers such as Kafka, can cache a massive amount of messages on disk. This allows consumers to retrieve the messages at their own pace,
+
+The messages can be cached for a lone period of time based on the retention policy
+
+## Radis
+
+Distributed caches such as Radis, can store key-value pairs in memory. It can provide high read/write performance compared to traditional databases.
+
+## Elastic search
+
+Full-text search engines like Elastic search can index data for document search and log search, providing quick and efficient access to specific data.
